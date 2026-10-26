@@ -80,10 +80,10 @@ ok.onclick = () => {
     confirmBox.classList.remove("active")
         let commende = ""
         for (let i = 0; i < panier.length; i++) {
-            commende += `\n${panier[i].quantity} × ${panier[i].name} = ${panier[i].quantity * panier[i].price}DH`
+            commende += `\n${panier[i].quantity} × ${panier[i].name} = ${panier[i].quantity * panier[i].price} د.م`
         }
         let total = getTotal()
-        commende += `\nTotal : ${total}DH`
+        commende += `\nمجموع : ${total} د.م`
         const message = `مرحبا اريد تأكيد طلبيتي  : ${commende} `;
 
         const phone = "212719081594";
