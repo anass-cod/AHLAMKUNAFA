@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "name": "بلاطو كنافة بريستيج لوز ݣرݣاع بيسطاش كاجو",
+        "price": 100,
+        "category": "حلويات",
+        "img": "../images/blato.jpg"
+    },
+    
+    {
+        "id": 2,
+        "name": "كنافة بالشكلاط",
+        "price": 8,
+        "category": "حلويات",
+        "img": "../images/knafachokola.jpg"
+    },
+    {
+        "id": 3,
+        "name": "بحلاوة مثلثة باللوز كاجو",
+        "price": 8,
+        "category": "حلويات",
+        "img": "../images/bhlawaLoze.jpg"
+    },
+    {
+        "id": 4,
+        "name": "أصابع الحلاوة",
+        "price": 3,
+        "category": "حلويات",
+        "img": "../images/Bhlawa.jpg"
+    },
+    {
+        "id": 5,
+        "name": "مكشوفة بالمكسرات",
+        "price": 7,
+        "category": "حلويات",
+        "img": "../images/mkxofa.jpg"
+    },
+    {
+        "id": 6,
+        "name": "بحلاوة بالمكسرات",
+        "price": 5,
+        "category": "حلويات",
+        "img": "../images/bhlawamokssarat.jpg"
+    },
+    {
+        "id": 7,
+        "name": "بحلاوة كركاع",
+        "price": 7,
+        "category": "حلويات",
+        "img": "../images/bhlawakrka3e.jpg"
+    },
+    {
+        "id": 8,
+        "name": "بسطيلة صغيرة بالدجاج وكوكاو",
+        "price": 9,
+        "category": "حلويات",
+        "img": "../images/Bstila.jpg"
+    },
+    {
+        "id": 9,
+        "name": "كنافة بالقشطة",
+        "price": 7,
+        "category": "حلويات",
+        "img": "../images/knafabllxta.jpg"
+    },
+    {
+        "id": 10,
+        "name": "عش البلبل",
+        "price": 5,
+        "category": "حلويات",
+        "img": "../images/BLBL.jpg"
+    },
+    {
+        "id" : 11 , 
+        "name" : "كنافة كريم كاراميل",
+        "price" : 8,
+        "category" : "حلويات",
+        "img" : "../images/knafakaramil.jpg"
+    }
+]

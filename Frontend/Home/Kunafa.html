@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./Kunafa.css">
+    <link rel="stylesheet" href="../codeSome.css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <title>AHLAM KUNAFA</title>
+</head>
+
+<body dir="rtl">
+    <div id="error-container" class="error-container" role="alert">
+        <i class="fas fa-exclamation-circle"></i>
+        <p>وقع خطأ، المرجو المحاولة مرة أخرى.</p>
+        <button type="button" aria-label="إغلاق رسالة الخطأ" onclick="closeAlret()">
+            &times;
+        </button>
+    </div>
+    <section id="home" class="hero-Section">
+        <header>
+            <img src="../images/logo.png" alt="Ahlam Kunafa">
+            <ul id="nav-links">
+                <li><a href="#home">رئيسية</a></li>
+                <li><a href="#menu">حلويات</a></li>
+                <li><a href="#contact">التواصل</a></li>
+            </ul>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </header>
+        <div>
+            <h1>مرحبا بكم في AHLAM KUNAFA</h1>
+            <p> مكانكم المفضل لألذ كنافة تقليدية ، مقرمشة وغنية بالنكهة. نحضرها لكم يوميا بحب و بأجود المكونات </p>
+            <button onclick="location.href='#menu'">عرض قائمة الحلويات</button>
+        </div>
+    </section>
+    <div class="msgAjout">
+        منتجاتك في السلة
+    </div>
+    <section id="menu" class="menu-Section">
+
+        <h2>قائمة الحلويات</h2>
+        <button onclick="location.href='../Menu/menu.html'">عرض المزيد <i class="fas fa-chevron-left"></i></button>
+        <div id="cards" class="menu-items">
+        </div>
+    </section>
+    <section id="contact" class="contact-Section">
+        <h2>لتواصل معنا</h2>
+        <div class="contact-container">
+            <div class="form">
+                <input placeholder="الاسم" type="text" id="clientName">
+                <input placeholder="رقم الهاتف" type="text" id="clientPhone">
+                <textarea placeholder="رسالة" id="msg"></textarea>
+                <p id="msgForm"></p>
+                <button onclick="send()">ارسال <i class="fas fa-paper-plane"></i></button>
+            </div>
+            <div class="info">
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> : <span>مرجان 2, Bayt Al Maârifa, شارع الزيتون، Meknès
+                            50000</span></li>
+                    <li><i class="fas fa-phone"></i> -- <i class="fab fa-whatsapp"></i> : <span dir="ltr"> 07 19 08 15
+                            94</span></li>
+                    <li><i class="fas fa-envelope"></i> : <span>AhlamKunafa@gmail.com</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="logoAndTitle">
+            <img src="../images/logo.png" alt="Ahlam Kunafa">
+            <p> ملكة الكنافة والحلويات الشرقية في مكناس !</p>
+        </div>
+        <div class="social-icons">
+            <h2>مواقع التواصل الاجتماعي</h2>
+            <ul>
+                <li><a target="_blank" href="https://www.instagram.com/ahlamkunafa#"><i class="fab fa-instagram">
+                            Instagram</i></a></li>
+                <li><a target="_blank"
+                        href="https://web.facebook.com/ahlamkunafa?__cft__[0]=AZivVI1pVpkBShlyQDx6sK_38zc7EKmK9Yw29mQVjc0k7a7YxRjqH3v_rz87atRkpGOLECV_Gt8-XE1SfaGSkMPQ-jm-P5FxJFdVe1y2Cf3VLEZoPXEdqlp-zmLEJ1w_dO8zmVhFMUHK75A-QPT27vBNe7XHcEuPVWdeEjfufIOrnsprerp5LHJEMQxsAlw&__tn__=-UC%2CP-R"><i
+                            class="fab fa-facebook"> Facebook</i></a></li>
+                <li><a target="_blank" href="https://wa.me/212719081594"><i class="fab fa-whatsapp"> WhatsApp</i></a>
+                </li>
+                <li><a target="_blank" href="https://www.youtube.com/@Ahlam_kunafa"><i class="fab fa-youtube">
+                            YouTube</i></a></li>
+            </ul>
+        </div>
+        <div class="quick-links">
+            <h2>روابط سريعة</h2>
+            <ul>
+                <li><a href="#home">رئيسية</a></li>
+                <li><a href="#menu">حلويات</a></li>
+                <li><a href="#contact">التواصل</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Ahlam Kunafa. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <script src="./kunafa.js"></script>
+    <script src="../codeSome.js"></script>
+</body>
+
+</html>

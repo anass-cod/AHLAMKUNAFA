@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="../codeSome.css">
+    <title>قائمة الحلويات</title>
+</head>
+
+<body dir="rtl">
+    <div id="error-container" class="error-container" role="alert">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <p>وقع خطأ، المرجو المحاولة مرة أخرى.</p>
+        <button type="button" aria-label="إغلاق رسالة الخطأ" onclick="closeAlret()">
+            &times;
+        </button>
+    </div>
+    <header>
+        <button onclick="location.href='../Home/Kunafa.html'" class="back-btn">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <h2>قائمة الحلويات</h2>
+    </header>
+    <div class="msgAjout">
+        منتجاتك في السلة
+    </div>
+    <nav>
+        <div class="container-search">
+            <input onkeyup="search()" id="searchInput" type="search" placeholder="ابحث عن منتج...">
+            <button onclick="search()" type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <button onclick="location.href='../panier/panier.html'" class="icone-Panier">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+    </nav>
+    <div class="sidbar">
+        <h2>تصفية المنتجات</h2>
+        <div class="inputMinMax">
+            <div>
+                <label for="Min">أقل ثمن</label>
+                <input id="Min" type="number">
+            </div>
+            <div>
+                <label for="Max">أعلى ثمن</label>
+                <input type="number" id="Max">
+            </div>
+        </div>
+        <button onclick="filtreProduit()">تطبيق</button>
+
+    </div>
+    <section id="menu" class="menu-items">
+
+    </section>
+    <script src="./menu.js"></script>
+    <script src="../codeSome.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,439 @@
+/* =========================
+   1. RESET & VARIABLES
+========================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FF9800;
+    --secondary-color: #061E30;
+    --accent-color: #168EAE;
+
+    --white-color: #FFFFFF;
+    --black-color: #111111;
+    --text-color: #263238;
+    --light-color: #FFF3E0;
+
+    --body-bg: #FFF8EF;
+    --section-bg: #FFFFFF;
+    --footer-bg: #061E30;
+
+    --btn-bg: #FF9800;
+    --btn-hover: #E68900;
+    --btn-text: #061E30;
+
+    --border-color: #F0D9BC;
+    --shadow: 0 4px 15px rgba(6, 30, 48, 0.10);
+    --shadow-hover: 0 10px 25px rgba(6, 30, 48, 0.16);
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --page-gap: 20px;
+    --transition: 0.3s ease;
+}
+
+/* =========================
+   2. GENERAL
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--body-bg);
+
+    padding: 0 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--page-gap);
+}
+
+/* =========================
+   3. HEADER
+========================= */
+
+header {
+    width: 100%;
+    min-width: 0;
+    min-height: 90px;
+    padding: 18px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background-color: var(--primary-color);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    box-shadow: var(--shadow);
+}
+
+header h2 {
+    color: var(--secondary-color);
+    font-size: clamp(1.3rem, 2.5vw, 2.2rem);
+    overflow-wrap: anywhere;
+}
+
+header button {
+    display: grid;
+    place-items: center;
+    padding: 8px;
+
+    color: var(--secondary-color);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+
+    font-size: 28px;
+    cursor: pointer;
+    transition:
+        transform var(--transition),
+        color var(--transition);
+}
+
+header button:hover {
+    transform: translateX(4px);
+    color: var(--white-color);
+}
+
+/* =========================
+   4. CART TABLE
+========================= */
+
+/* =========================
+   4. CART TABLE
+========================= */
+
+.table-container {
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 10px;
+
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    min-width: 500px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--section-bg);
+}
+
+thead {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+thead {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+thead th {
+    padding: 18px 14px;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+}
+
+tbody tr {
+    background-color: var(--section-bg);
+    transition: background-color var(--transition);
+}
+
+tbody tr:hover {
+    background-color: var(--light-color);
+}
+
+tbody td {
+    padding: 15px 12px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Quantity / action buttons */
+
+table tbody tr button {
+    min-width: 32px;
+    min-height: 32px;
+    margin: 0 4px;
+    padding: 5px 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    background-color: var(--light-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+
+    cursor: pointer;
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+table tbody tr button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+/* =========================
+   5. FOOTER / CART ACTIONS
+========================= */
+
+footer {
+    width: min(100%, 700px);
+    min-height: 90px;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    background-color: var(--section-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+}
+
+footer button {
+    flex: 1 1 180px;
+    min-height: 45px;
+    padding: 10px 16px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: var(--radius-sm);
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+
+    cursor: pointer;
+    transition:
+        background-color var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+footer button:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+footer button:active {
+    transform: translateY(0);
+}
+
+.confirmation {
+    position: absolute;
+    inset: 0;
+    background-color: #20527956;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+    z-index: 1000;
+}
+
+.confirmation.active {
+    display: flex;
+}
+
+.container {
+    width: 70%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 350px;
+    background-color: #96b3c9;
+    color: var(--secondary-color);
+    border-radius: var(--radius-lg);
+    padding: 10px;
+}
+
+.container h3 {
+    font-size: 30px;
+}
+
+.commendes {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.title {
+    font-size: 25px;
+    text-align: center;
+}
+
+.commendes p {
+    font-size: 20px;
+}
+
+.totalSpan {
+    font-size: 25px;
+}
+
+.totalSpan strong,
+.totalPrice {
+    color: var(--secondary-color);
+}
+
+.btn-confirme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.btn-confirme button {
+    width: 15%;
+    height: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: #96b3c9;
+    cursor: pointer;
+
+}
+
+/* =========================
+   6. RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+    body {
+        padding: 0 10px 20px;
+        gap: 15px;
+        align-items: start;
+    }
+
+    header {
+        min-height: 75px;
+        padding: 15px;
+    }
+
+    header h2 {
+        font-size: 1.3rem;
+    }
+
+    header button {
+        font-size: 24px;
+    }
+
+    table {
+
+        width: 100%;
+        min-width: 700px;
+
+    }
+
+    thead th {
+        padding: 12px 6px;
+        font-size: 14px;
+    }
+
+    tbody td {
+        padding: 12px 5px;
+        font-size: 14px;
+    }
+
+    table tbody tr button {
+        min-width: 28px;
+        min-height: 28px;
+        margin: 2px;
+        padding: 4px 6px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    footer button {
+        flex-basis: 100%;
+        font-size: 15px;
+    }
+    .container{
+        width: 90%;
+        max-width: 90%;
+    }
+    .container h3{
+        font-size:25px ;
+    }
+     .btn-confirme button{
+        width: 20%;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .commendes p {
+        font-size: 18px;
+    }
+    .totalSpan{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+    thead th {
+        padding: 10px 3px;
+        font-size: 12px;
+    }
+
+    tbody td {
+        padding: 10px 3px;
+        font-size: 12px;
+    }
+}

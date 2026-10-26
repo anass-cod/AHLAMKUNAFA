@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./panier.css">
+    <title>سلة المنتجات</title>
+</head>
+
+<body dir="rtl">
+    <header>
+        <button onclick="location.href='../menu/menu.html'" class="back-btn">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <h2>سلة المنتجات</h2>
+    </header>
+    <div id="confirmation" class="confirmation">
+        <div class="container">
+            <h3>هل تريد تأكيد طلبية ؟</h3>
+                    <span class="title">الطلبات : </span>
+
+                <div id="commendes" class="commendes">
+                </div>
+
+            <span id="totalSpan" class="totalSpan">المجموع : <strong>250.00 د.م</strong></span>
+            <div class="btn-confirme">
+                <button id="ok">نعم</button>
+                <button id="no">لا</button>
+            </div>
+        </div>
+    </div>
+    <section class="table-container">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>اسم</th>
+                    <th>ثمن</th>
+                    <th>كمية</th>
+                    <th>المجموع</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+            </tbody>
+        </table>
+    </section>
+    <footer>
+        <h2>المجموع : <span id="totatAffiche"></span></h2>
+        <button onclick="confirme()">تأكيد الطلبية</button>
+    </footer>
+    <script src="./panier.js"></script>
+</body>
+
+</html>
